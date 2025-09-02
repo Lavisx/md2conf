@@ -78,12 +78,12 @@ class TableOfContentsBuilder:
         """
         Returns a proposed document title.
 
-        The proposed title is text of the top-level heading if and only if that heading is unique.
+        The proposed title is text of the first top-level heading if any exist.
 
         :returns: Title text, or `None` if no title can be inferred.
         """
 
-        if len(self.tree) == 1:
+        if len(self.tree) >= 1:
             return self.tree[0].text
         else:
             return None

@@ -78,7 +78,7 @@ class TestUnit(TypedTestCase):
             TableOfContentsEntry(2, "Section 2"),
         ]
         self.assertEqual(expected, builder.tree)
-        self.assertIsNone(builder.get_title())
+        self.assertIsNone(builder.get_title(), "Section 1")
 
     def test_toc_title(self) -> None:
         builder = TableOfContentsBuilder()
